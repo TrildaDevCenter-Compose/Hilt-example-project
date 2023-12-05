@@ -6,7 +6,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import com.tomasrepcik.hiltexample.about.AboutScreen
-import com.tomasrepcik.hiltexample.app.AppViewModel
+import com.tomasrepcik.hiltexample.app.intro.internals.AppViewModel
 import com.tomasrepcik.hiltexample.home.HomeScreen
 import com.tomasrepcik.hiltexample.settings.SettingsScreen
 

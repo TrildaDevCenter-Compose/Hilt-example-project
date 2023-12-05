@@ -5,7 +5,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.tomasrepcik.hiltexample.NavRoutes
 import com.tomasrepcik.hiltexample.R
-import com.tomasrepcik.hiltexample.app.AppEvent
+import com.tomasrepcik.hiltexample.app.intro.internals.AppEvent
 import com.tomasrepcik.hiltexample.app.ui.previews.AllScreenPreview
 
 @Composable

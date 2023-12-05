@@ -6,7 +6,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import com.tomasrepcik.hiltexample.NavRoutes
-import com.tomasrepcik.hiltexample.app.AppViewModel
+import com.tomasrepcik.hiltexample.app.intro.internals.AppViewModel
 import com.tomasrepcik.hiltexample.intro.composables.MotivationScreen
 import com.tomasrepcik.hiltexample.intro.composables.RecommendationScreen
 import com.tomasrepcik.hiltexample.intro.composables.WelcomeScreen

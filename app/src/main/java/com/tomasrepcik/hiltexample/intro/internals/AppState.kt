@@ -1,4 +1,4 @@
-package com.tomasrepcik.hiltexample.app
+package com.tomasrepcik.hiltexample.app.intro.internals
 
 sealed class AppState {
 

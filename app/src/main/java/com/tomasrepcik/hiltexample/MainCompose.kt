@@ -10,7 +10,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import com.tomasrepcik.hiltexample.app.AppState
+import com.tomasrepcik.hiltexample.app.intro.internals.AppState
 import com.tomasrepcik.hiltexample.app.ui.components.hiltexample.AppDrawerContent
 import com.tomasrepcik.hiltexample.app.ui.components.hiltexample.AppDrawerItemInfo
 import com.tomasrepcik.hiltexample.app.ui.theme.AppDrawerExampleTheme

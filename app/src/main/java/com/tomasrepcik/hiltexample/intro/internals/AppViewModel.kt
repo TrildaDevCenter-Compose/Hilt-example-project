@@ -1,4 +1,4 @@
-package com.tomasrepcik.hiltexample.app
+package com.tomasrepcik.hiltexample.app.intro.internals
 
 import androidx.lifecycle.ViewModel
 import com.tomasrepcik.hiltexample.intro.INTRO_VERSION
@@ -36,5 +36,4 @@ class AppViewModel @Inject constructor(
     }
 
     private fun sendMail() = mailClient.sendMail()
-
 }

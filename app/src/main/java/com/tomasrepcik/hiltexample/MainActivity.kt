@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.runtime.collectAsState
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.tomasrepcik.hiltexample.app.AppViewModel
+import com.tomasrepcik.hiltexample.app.intro.internals.AppViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 

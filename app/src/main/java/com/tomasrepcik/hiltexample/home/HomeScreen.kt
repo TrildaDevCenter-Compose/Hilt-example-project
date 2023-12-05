@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.tomasrepcik.hiltexample.app.AppEvent
+import com.tomasrepcik.hiltexample.app.intro.internals.AppEvent
 import com.tomasrepcik.hiltexample.app.ui.components.appbar.AppBar
 
 @Composable
