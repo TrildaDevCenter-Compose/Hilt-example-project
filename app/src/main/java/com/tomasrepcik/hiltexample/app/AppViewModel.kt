@@ -1,6 +1,7 @@
 package com.tomasrepcik.hiltexample.app
 
 import androidx.lifecycle.ViewModel
+import com.tomasrepcik.hiltexample.intro.INTRO_VERSION
 import com.tomasrepcik.hiltexample.intro.repo.MailClient
 import com.tomasrepcik.hiltexample.intro.repo.SettingsRepo
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -19,7 +20,9 @@ class AppViewModel @Inject constructor(
 
     init {
         _isOnboarded.value =
-            if (settingsRepo.isOnboarded()) AppState.Onboarded else AppState.NotOnboarded
+            if (settingsRepo.isOnboarded() == INTRO_VERSION)
+                AppState.Onboarded
+            else AppState.NotOnboarded
     }
 
     fun onEvent(appEvent: AppEvent) = when (appEvent) {
@@ -29,7 +32,7 @@ class AppViewModel @Inject constructor(
 
     private fun saveUserOnboarding() {
         _isOnboarded.value = AppState.Onboarded
-        settingsRepo.saveOnboardingState(true)
+        settingsRepo.saveOnboardingState(INTRO_VERSION)
     }
 
     private fun sendMail() = mailClient.sendMail()

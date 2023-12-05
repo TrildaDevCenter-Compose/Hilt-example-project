@@ -12,7 +12,7 @@ import com.tomasrepcik.hiltexample.intro.composables.RecommendationScreen
 import com.tomasrepcik.hiltexample.intro.composables.WelcomeScreen
 
 fun NavGraphBuilder.introGraph(navController: NavController) {
-    navigation(startDestination = IntroNavOption.WelcomeScreen.name, route = NavRoutes.IntroRoute.name) {
+    navigation(startDestination = IntroNavOption.WelcomeScreen.name, route = NavRoutes.IntroGraph.name) {
         composable(IntroNavOption.WelcomeScreen.name){
             WelcomeScreen(navController)
         }

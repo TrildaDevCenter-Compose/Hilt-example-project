@@ -18,8 +18,8 @@ fun RecommendationScreen(
     buttonText = R.string.start_app
 ) {
     onEvent(AppEvent.FinishOnboarding)
-    navController.navigate(NavRoutes.MainRoute.name) {
-        popUpTo(NavRoutes.IntroRoute.name)
+    navController.navigate(NavRoutes.MainGraph.name) {
+        popUpTo(NavRoutes.IntroGraph.name)
     }
 }
 

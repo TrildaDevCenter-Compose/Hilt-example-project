@@ -11,7 +11,7 @@ import com.tomasrepcik.hiltexample.home.HomeScreen
 import com.tomasrepcik.hiltexample.settings.SettingsScreen
 
 fun NavGraphBuilder.mainGraph(drawerState: DrawerState) {
-    navigation(startDestination = MainNavOption.HomeScreen.name, route = NavRoutes.MainRoute.name) {
+    navigation(startDestination = MainNavOption.HomeScreen.name, route = NavRoutes.MainGraph.name) {
         composable(MainNavOption.HomeScreen.name){
             val viewModel: AppViewModel = hiltViewModel()
             HomeScreen(drawerState){

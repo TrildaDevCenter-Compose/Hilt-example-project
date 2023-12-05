@@ -34,40 +34,49 @@ fun MainCompose(
                     when (onUserPickedOption) {
                         MainNavOption.HomeScreen -> {
                             navController.navigate(onUserPickedOption.name) {
-                                popUpTo(NavRoutes.MainRoute.name)
+                                popUpTo(NavRoutes.MainGraph.name)
                             }
                         }
 
                         MainNavOption.SettingsScreen -> {
                             navController.navigate(onUserPickedOption.name) {
-                                popUpTo(NavRoutes.MainRoute.name)
+                                popUpTo(NavRoutes.MainGraph.name)
                             }
                         }
 
                         MainNavOption.AboutScreen -> {
                             navController.navigate(onUserPickedOption.name) {
-                                popUpTo(NavRoutes.MainRoute.name)
+                                popUpTo(NavRoutes.MainGraph.name)
                             }
                         }
                     }
                 }
             }) {
-                NavHost(
-                    navController, startDestination = when (appState) {
-                        AppState.NotOnboarded -> NavRoutes.IntroRoute.name
-                        AppState.Onboarded -> NavRoutes.MainRoute.name
-                    }
-                ) {
-                    introGraph(navController)
-                    mainGraph(drawerState)
-                }
+                AppNavHost(navController, appState, drawerState)
             }
         }
     }
 }
 
+@Composable
+private fun AppNavHost(
+    navController: NavHostController,
+    appState: AppState,
+    drawerState: DrawerState
+) {
+    NavHost(
+        navController, startDestination = when (appState) {
+            AppState.NotOnboarded -> NavRoutes.IntroGraph.name
+            AppState.Onboarded -> NavRoutes.MainGraph.name
+        }
+    ) {
+        introGraph(navController)
+        mainGraph(drawerState)
+    }
+}
+
 enum class NavRoutes {
-    IntroRoute, MainRoute,
+    IntroGraph, MainGraph,
 }
 
 object DrawerParams {
